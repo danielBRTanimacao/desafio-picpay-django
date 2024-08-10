@@ -1,4 +1,4 @@
-from ninja import ModelSchema
+from ninja import ModelSchema, Schema
 from .models import User
 
 class UserSchema(ModelSchema):
