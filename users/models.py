@@ -1,9 +1,10 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from decimal import Decimal
+from utils.validators import validate_cpf
 
 class User(AbstractUser):
-    cpf = models.CharField(max_length=14, unique=True)
+    cpf = models.CharField(max_length=14, unique=True, validators=[validate_cpf])
     email = models.EmailField(unique=True)
     amount = models.DecimalField(max_digits=15, decimal_places=2, default=Decimal('0.00'))
 
