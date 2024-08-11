@@ -25,8 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rolepermissions',
     'users'
 ]
+
+ROLEPERMISSIONS_MODULE = 'backend.roles'
 
 AUTH_USER_MODEL = 'users.User'
 
